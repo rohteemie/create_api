@@ -31,6 +31,7 @@ def users():
         _gender = request.form["gender"]
         _email = request.form["email"]
 
+
         query = f"INSERT INTO users(name, age, gender, email) VALUES ('{_name}', '{_age}', '{_gender}', '{_email}')"
         cursor.execute(query)
         conn.commit()
@@ -38,4 +39,4 @@ def users():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(debug=True)
